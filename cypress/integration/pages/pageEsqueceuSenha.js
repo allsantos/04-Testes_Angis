@@ -11,5 +11,5 @@ class pageEsqueceuSenha {
     clickVoltaHomeEsqSen () {
         cy.get('').click()
     }
-}
+} puts 
 export default new pageEsqueceuSenha

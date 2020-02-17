@@ -1,5 +1,5 @@
 {
     "integrationFolder": "cypress/integration",
     "viewportWidth":1300,
-    "baseUrl":""
+    "baseUrl":"http://stage.signainfo.com.br/"
   }

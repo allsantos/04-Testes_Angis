@@ -1,18 +1,18 @@
 class pageCadastroUser {
     setCnpjCad (usercnpj) {
-        cy.get('').type(usercnpj) // CNPJ
+        cy.get('').type(usercnpj).should('have.value', '') // CNPJ
     } 
     setCpfCad (usercpf) {
-        cy.get('').type(usercpf) // CPF
+        cy.get('').type(usercpf).should('have.value', '') // CPF
     }
     setNomeCad (nameUser) {
-        cy.get('').type(nameUser) // Nome
+        cy.get('').type(nameUser).should('have.value', '') // Nome
     }
     setEmailCad (useremail) {
-        cy.get('').type(useremail) // Email
+        cy.get('').type(useremail).should('have.value', '') // Email
     }
     setConfirEmailCad (confiremail) {
-        cy.get('').type(confiremail) // COnfirmar Email
+        cy.get('').type(confiremail).should('have.value', '') // COnfirmar Email
     }
     clickGravarCad () {
         cy.get('').click() // Gravar
