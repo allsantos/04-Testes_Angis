@@ -17,6 +17,9 @@ class pageCadastroUser {
     clickGravarCad () {
         cy.get('').click() // Gravar
     }
+    clickVoltarCad() {
+        cy.get('').click()
+    }
     /*--------------Tela de agradecimentos após cadastro-------------- */
     // Mensagem de Tempo
     // Obrigado por escolher o ANGIS!
