@@ -1,15 +1,15 @@
 class pageEsqueceuSenha {
     setInfoEmail (informaremail){
-        cy.get('').type(informaremail)
+        cy.get('.MuiInputBase-input').type(informaremail)
     }
     clickEnviarEmailenviaremail (){
-        cy.get('').click()
+        cy.get('.MuiButton-contained > .MuiButton-label').click()
     }
     clickCancelarEsqSenha () {
-        cy.get('').click()
+        cy.get('.MuiButton-text > .MuiButton-label').click()
     }
-    clickVoltaHomeEsqSen () {
-        cy.get('').click()
+    clickVoltaPageLogin () {
+        cy.get('.MuiButton-label').click()
     }
-} puts 
+} 
 export default new pageEsqueceuSenha

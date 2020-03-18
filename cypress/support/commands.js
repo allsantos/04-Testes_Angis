@@ -23,3 +23,8 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.config('pageLoadTimeout', 5000)
+// Cypress.Commands.add('login', (email, pw) => {})
+// Cypress.Commands.overwrite('visit', (orig, url, options) => {})
+// Cypress.Commands.add(name, callbackFn)

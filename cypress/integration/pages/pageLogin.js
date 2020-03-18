@@ -1,18 +1,36 @@
-class pageLogin {
+class pageLogin { 
     setUsuario (anguser){
-        cy.get('.MuiFormControl-marginNormal .MuiInputBase-inputAdornedStart').type(anguser,{delay:100}).should('have.value', 'hy54t3wesdfc')  // Usuario 
-    }           
+        cy.get('.jss129 > .MuiGrid-container > .MuiGrid-grid-xs-true > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').clear().type(anguser,{delay:0})//.should('have.value', 'allan.santos@signa.net.br')  // Usuario 
+    }
     setSenha (angpass){
-        cy.get('div.MuiFormControl-root.MuiTextField-root.jss104.jss105 > div > input').type(angpass,{delay:100})//.should('have.value', 'daw1231#$%¨&o○Ü○+') // Login
+        cy.get('.jss192 > .MuiGrid-container > .MuiGrid-grid-xs-true > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').clear().type(angpass,{delay:0})//.should('have.value', '123456789') // Login
     }
-    clickEntrar (){
-        cy.get('button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.btn-gradient.btn-login').click() // Entrar
-    }
+    setUsuario1 (anguser){
+        cy.get('.jss129 > .MuiGrid-container > .MuiGrid-grid-xs-true > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').clear().type(anguser)
+    }   
+    setSenha1 (angpass){
+        cy.get('.jss192 > .MuiGrid-container > .MuiGrid-grid-xs-true > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type(angpass)
+    }         
     clickEsqueciSenha () {
-        cy.get('').click() // Esqueci minha senha
+        cy.get('.MuiLink-root.MuiTypography-colorPrimary.MuiTypography-root').click() // Esqueci minha senha
     }
     clickCadastrarUser () {
-        cy.get('').click() // Cadastrar Empresa
+        cy.get('.MuiButton-text').click() // Cadastrar Empresa
+    }
+    clickEntrar (){
+        cy.get('.MuiButton-contained > .MuiButton-label').click() // Entrar   
+    }
+
+    clickEntrarDash (){
+        for(let n = 0; n < 100; n ++){
+        cy.get('.MuiButton-contained > .MuiButton-label').click({ multiple: true }) // Entrar  
+        }
+    }
+    clickEntrarDash2 (){
+        for(let n = 0; n < 100; n ++){
+        cy.get('.MuiButton-contained > .MuiButton-label').click({ multiple: true }); // Entrar  
+        }
     }
 }
 export default new pageLogin
+
